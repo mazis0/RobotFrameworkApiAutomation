@@ -6,7 +6,7 @@ This framework provides:
 - Gherkin style
 
 ## 🚀 Setup
-### instalation on mac os
+### installation on mac os
 ```
 python3 -m venv venv
 source venv/bin/activate
@@ -15,7 +15,7 @@ playwright install
 rfbrowser init
 ```
 
-### instalation on windows os
+### installation on windows os
 ```
 python -m venv venv
 venv\Scripts\activate
