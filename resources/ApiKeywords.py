@@ -33,21 +33,6 @@ class ApiKeywords:
     def i_send_create_user_request(self):
         self.last_response = self.user_api.create_user(self.email, self.password)
 
-    def response_field_should_equal(self, field, expected_value):
-        body = self.last_response.json()
-        actual_value = body.get(field)
-
-        try:
-            if expected_value.isdigit():
-                expected_value = int(expected_value)
-        except:
-            pass
-
-        if actual_value != expected_value:
-            raise AssertionError(
-                f"Expected {field}={expected_value}, got {actual_value}"
-            )
-
     def response_field_should_equal_to(self, field, expected_value):
         body = self.last_response.json()
         # Mendukung nested key dengan dot notation: data.email
